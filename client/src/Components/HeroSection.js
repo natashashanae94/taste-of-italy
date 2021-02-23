@@ -37,6 +37,9 @@ function HeroSection({
       .catch(function (error) {
         console.log(error);
       });
+
+      e.preventDefault();
+      this.setState({name: '', numberOfGuests: '', date: '', time:''})
  }
 
  
