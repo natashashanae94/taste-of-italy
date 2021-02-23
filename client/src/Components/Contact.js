@@ -7,7 +7,6 @@ import {
   FaGooglePlusG
 } from "react-icons/fa";
 
-const launchHouse = "";
 function Contact() {
   return (
     <Package.Wrapper className="container-fluid px-0">

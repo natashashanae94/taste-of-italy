@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Custom from "./styles.scss";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Pages/Homepage/Home";
 import Menu from "./Components/Pages/Menu/Menu";
@@ -35,12 +34,6 @@ function App() {
 }
 
 //Styled Components
-
-const Styles = {
-  Wrapper: styled.main`
-    margin: 80%;
-  `
-};
 
 const CSSReset = createGlobalStyle`
 

@@ -16,7 +16,7 @@ router.post("/reservation", (req, res) => {
         time: req.body.time
     });
 
-    
+
     newUser.save();
 
     res.send('Reservation added successfully..');
