@@ -19,8 +19,8 @@ function HeroSection({
 /*Setting up useState for each input field.*/
   const [name, setName] = useState("");
   const [numberOfGuests, setNumberOfGuests] = useState(0);
-  const [date, setDate] = useState(0);
-  const [time,setTime] = useState(0);
+  const [date, setDate] = useState("");
+  const [time,setTime] = useState("");
 
  const onSubmit = e => {
      e.preventDefault();
@@ -39,7 +39,10 @@ function HeroSection({
       });
 
       e.preventDefault();
-      this.setState({name: '', numberOfGuests: '', date: '', time:''})
+      setName("");
+      setNumberOfGuests("");
+      setDate("");
+      setTime("");
  }
 
  
