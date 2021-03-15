@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import "../styles.scss";
 
@@ -12,32 +12,32 @@ function Plates() {
       </div>
       <Package.Row className="row">
         <div className="bowl col-md-3">
-          <img src="images/ramen.png" width="100%" />
+          <img src="images/ramen.png" alt="ramen" width="100%" />
           <div className="text-center">
             <p>Lorem ipsum dolor</p>
-            <Price.tag>$25</Price.tag>
+            <Price.Tag>$25</Price.Tag>
           </div>
         </div>
         <div className="bowl col-md-3">
-          <img src="images/kabob.png" width="100%" />
+          <img src="images/kabob.png" alt="kabob" width="100%" />
           <div className="text-center">
             <p>Lorem ipsum dolor</p>
-            <Price.tag>$25</Price.tag>
+            <Price.Tag>$25</Price.Tag>
           </div>
         </div>
         <div className="bowl col-md-3">
-          <img src="images/salad.png" width="100%" />
+          <img src="images/salad.png" alt="salad" width="100%" />
           <div className="text-center">
             <p>Lorem ipsum dolor</p>
-            <Price.tag>$25</Price.tag>
+            <Price.Tag>$25</Price.Tag>
           </div>
         </div>
         <div className="bowl col-md-3">
-          <img src="images/ramen.png" width="100%" />
-          <Price.display className="text-center">
+          <img src="images/ramen.png" alt="ramen" width="100%" />
+          <Price.Display className="text-center">
             <p>Lorem ipsum dolor</p>
-            <Price.tag>$25</Price.tag>
-          </Price.display>
+            <Price.Tag>$25</Price.Tag>
+          </Price.Display>
         </div>
       </Package.Row>
     </Package.Wrapper>
@@ -58,11 +58,11 @@ const Package = {
 };
 
 const Price = {
-  display: styled.div`
+  Display: styled.div`
     height: 150px;
   `,
 
-  tag: styled.div`
+  Tag: styled.div`
     font-family: "Playfair Display", serif;
     font-size: 50px;
     color: #37bc96;
