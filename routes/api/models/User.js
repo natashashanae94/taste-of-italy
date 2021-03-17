@@ -7,7 +7,7 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-
+    
     numberOfGuests: {
         type: Number,
         required: true

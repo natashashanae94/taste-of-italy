@@ -19,6 +19,9 @@ app.use(bodyParser.json());
 const users = require("./routes/api/users");
 app.use("/api/users", users);
 
+const signup = require("./routes/api/signup");
+app.use("/api/signup", signup);
+
 //DB Config
 const db = require("./config/keys").mongoURI;
 

@@ -1,18 +1,22 @@
 import React from "react";
+import Mains from "../../Mains";
+import Extras from "../../Extras";
+import {mains,sides, drinks} from "./data";
 
-function Menu() {
-  return <div>
-     <section className="mains">
-      {meals.map((meals, index) => (
-        <article className="menu-item" key={index}>
-          <h3 className="mains-name">{meals.name}</h3>
-          <Input type="mains" name={name.name} index={index} />
-          <strong className="mains-price">${meal.price}</strong>
-          <p className="mains-description">{meal.description}</p>
-        </article>
-      ))}
-    </section>
-  </div>;
+function Menu(
+
+) {
+  return(
+    <div>
+      <div className="menu">
+        <Mains meals={mains} />
+        <aside className="aside">
+          <Extras type="Sides" items={sides} />
+          <Extras type="Drinks" items={drinks} />
+        </aside>
+      </div>
+    </div>
+  );
 }
 
 export default Menu;
