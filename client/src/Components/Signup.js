@@ -1,8 +1,35 @@
-import React from "react";
+import { set } from "mongoose";
+import React, {useState} from "react";
 import styled from "styled-components";
 import "../styles.scss";
 
+import axios from "axios";
+
 function Signup() {
+
+  /*setting up the useState for each input field*/
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const onSubmit = e => {
+
+    axios.post('http://localhost:5000/api/signup/signupform', {
+      name: name,
+      email: email
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+    e.preventDefault();
+    setName("");
+    setEmail("");
+
+  }
+
   return (
     <Package.Wrapper className="container-fluid px-0">
       <Package.Row>
@@ -12,9 +39,9 @@ function Signup() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
           </p>
-          <Form.Group className="mt-5">
-            <Form.Input type="text" placeholder="Name" />
-            <Form.Input type="text" placeholder="Email Address" />
+          <Form.Group className="mt-5" onSubmit = {onSubmit}>
+            <Form.Input onChange={e => setName(e.target.value )} value={name} type="text" placeholder="Name" />
+            <Form.Input onChange={e => setEmail(e.target.value)} value={email} type="text" placeholder="Email Address" />
             <Form.Input type="submit" value="Submit" />
           </Form.Group>
         </div>

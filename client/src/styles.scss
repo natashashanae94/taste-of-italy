@@ -1,12 +1,24 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:ital@0;1&display=swap');
 
-// font-family: 'Lato', sans-serif;
-// font-family: 'Playfair Display', serif;
 $playfair-font: 'Playfair Display', serif;
 $lato-font: 'Lato', sans-serif;
 
-body{
+//colors
+$primary: #a8e6cd;
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
   overflow-x: hidden;
 }
 
@@ -75,3 +87,45 @@ p {
   background: rgba(255,255,255,0.6);
 }
   
+/*MENU.JS, MAINS.JS, EXTRAS.JS*/
+
+.menu-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.mains {
+  grid-column: 1 / 2;
+}
+
+.mains-description {
+  flex: 1 1 100%;
+  margin: 0.75rem 0 0;
+}
+
+.aside {
+  grid-column: 2 / 3;
+}
+
+.extras {
+  + .extras {
+    margin-top: 2.5rem;
+  }
+
+  .menu-item {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.extras-heading {
+  margin: 0 0 1.5rem;
+  border-bottom: 1px solid #37BC96;
+}
+
+.extras-name {
+  flex-grow: 1;
+}
+

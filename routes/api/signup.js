@@ -14,7 +14,6 @@ router.post("/signupform", (req, res) => {
         email: req.body.email
     });
 
-
     newSignUpUser.save();
 
     console.log(req.body);

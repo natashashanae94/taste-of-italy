@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function Extras({
     type,
     items
@@ -18,3 +19,5 @@ function Extras({
 }
 
 export default Extras;
+
+

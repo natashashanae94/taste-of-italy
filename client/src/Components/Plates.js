@@ -49,6 +49,7 @@ const Package = {
     overflow-x: hidden;
     z-index: 1;
     margin-bottom: 50px;
+    background-color: #ffffff;
   `,
 
   Row: styled.div`

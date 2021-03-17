@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
+require('dotenv').config();
+
 app.use(cors());
 
 // BodyParser middleware
@@ -22,13 +24,12 @@ app.use("/api/users", users);
 const signup = require("./routes/api/signup");
 app.use("/api/signup", signup);
 
-//DB Config
-const db = require("./config/keys").mongoURI;
+const uri = process.env.ATLAS_URI;
 
 //Connect to MongoDB
 mongoose
 .connect(
-    db,
+    uri,
     { useNewUrlParser: true, useUnifiedTopology: false }
 )
 .then(() => console.log("MongoDB successfully connected"))

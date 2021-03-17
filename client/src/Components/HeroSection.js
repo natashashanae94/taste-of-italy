@@ -21,7 +21,6 @@ function HeroSection({
   const [time,setTime] = useState("");
 
  const onSubmit = e => {
-     e.preventDefault();
 
      axios.post('http://localhost:5000/api/users/reservation', {
         name: name,
@@ -42,8 +41,6 @@ function HeroSection({
       setDate("");
       setTime("");
  }
-
- 
 
   return (
     <Package.Wrapper
